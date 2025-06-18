@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aliza Store - Category</title>
+  <link rel="stylesheet" href="category-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">Aliza Store</div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="category.html?cat=ladies-dresses" class="nav-link" id="link-ladies">Ladies' Dresses</a>
+        <a href="category.html?cat=handbags" class="nav-link" id="link-handbags">Handbags</a>
+        <a href="category.html?cat=beauty-products" class="nav-link" id="link-beauty">Beauty Products</a>
+        <a href="category.html?cat=kids-toys" class="nav-link" id="link-toys">Kids' Toys</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <h1 id="categoryTitle">Category</h1>
+    <div class="products-grid" id="productsGrid">
+      <!-- Products will be inserted here -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; 2024 Aliza Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Product data for each category
+    const categoriesData = {
+   'ladies-dresses': [
+    { name: 'Elegant Floral Dress', img: 'image/dress1.png' },
+    { name: 'Classic Black Dress', img: 'image/dress2.jpeg' },
+    { name: 'Summer Beach Dress', img: 'image/dress3.jpg' },
+    { name: 'Party Dress', img: 'image/dress4.jpg' },
+    { name: 'Casual Dress', img: 'image/dress5.jpg' },
+    { name: 'Elegant Floral Dress', img: 'image/dress1.png' },
+    { name: 'Classic Black Dress', img: 'image/dress2.jpeg' },
+    { name: 'Summer Beach Dress', img: 'image/dress3.jpg' },
+    { name: 'Party Dress', img: 'image/dress4.jpg' },
+    { name: 'Casual Dress', img: 'image/dress5.jpg' },
+    { name: 'Elegant Floral Dress', img: 'image/dress1.png' },
+    { name: 'Classic Black Dress', img: 'image/dress2.jpeg' },
+    { name: 'Summer Beach Dress', img: 'image/dress3.jpg' },
+    { name: 'Party Dress', img: 'image/dress4.jpg' },
+    { name: 'Casual Dress', img: 'image/dress5.jpg' },
+    { name: 'Elegant Floral Dress', img: 'image/dress1.png' },
+    { name: 'Classic Black Dress', img: 'image/dress2.jpeg' },
+    { name: 'Summer Beach Dress', img: 'image/dress3.jpg' },
+    { name: 'Party Dress', img: 'image/dress4.jpg' },
+    { name: 'Casual Dress', img: 'image/dress5.jpg' },
+    { name: 'Elegant Floral Dress', img: 'image/dress1.png' },
+    { name: 'Classic Black Dress', img: 'image/dress2.jpeg' },
+    { name: 'Summer Beach Dress', img: 'image/dress3.jpg' },
+    { name: 'Party Dress', img: 'image/dress4.jpg' },
+    { name: 'Casual Dress', img: 'image/dress5.jpg' }    
+    ],
+  'handbags': [
+    { name: 'Stylish Handbag', img: 'https://placehold.co/400x500/007bff/fff?text=Handbag' },
+    { name: 'Leather Purse', img: 'https://placehold.co/400x500/6c757d/fff?text=Leather+Purse' },
+    { name: 'Vintage Tote', img: 'https://placehold.co/400x500/d9b382/fff?text=Vintage+Tote' },
+    { name: 'Crossbody Bag', img: 'https://placehold.co/400x500/ff6f61/fff?text=Crossbody+Bag' },
+    { name: 'Clutch', img: 'https://placehold.co/400x500/4caf50/fff?text=Clutch' },
+    { name: 'Backpack', img: 'https://placehold.co/400x500/3b82f6/fff?text=Backpack' }
+  ],
+  'beauty-products': [
+    { name: 'Luxury Skincare', img: 'https://placehold.co/400x500/fbbf24/000?text=Skincare' },
+    { name: 'Organic Makeup', img: 'https://placehold.co/400x500/f59e0b/000?text=Makeup' },
+    { name: 'Fragrance Set', img: 'https://placehold.co/400x500/eab308/000?text=Fragrance' },
+    { name: 'Moisturizer', img: 'https://placehold.co/400x500/ff6f61/000?text=Moisturizer' },
+    { name: 'Lipstick', img: 'https://placehold.co/400x500/4caf50/000?text=Lipstick' },
+    { name: 'Nail Polish', img: 'https://placehold.co/400x500/3b82f6/000?text=Nail+Polish' }
+  ],
+  'kids-toys': [
+    { name: 'Fun Stuffed Animal', img: 'https://placehold.co/400x500/ff6f61/fff?text=Stuffed+Animal' },
+    { name: 'Educational Puzzle', img: 'https://placehold.co/400x500/4caf50/fff?text=Puzzle' },
+    { name: 'Colorful Blocks', img: 'https://placehold.co/400x500/3b82f6/fff?text=Blocks' },
+    { name: 'Action Figure', img: 'https://placehold.co/400x500/ff6f61/fff?text=Action+Figure' },
+    { name: 'Dollhouse', img: 'https://placehold.co/400x500/4caf50/fff?text=Dollhouse' },
+    { name: 'Toy Car', img: 'https://placehold.co/400x500/3b82f6/fff?text=Toy+Car' }
+  ]
+};
+
+
+    // Utility to get query param
+    function getCategoryFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('cat') || 'ladies-dresses';
+    }
+
+    // Random price generator
+    function getRandomPrice() {
+      return (Math.random() * 90 + 30).toFixed(2);
+    }
+
+    // Render products
+    function renderProducts(category) {
+      const productsGrid = document.getElementById('productsGrid');
+      productsGrid.innerHTML = '';
+      const products = categoriesData[category] || [];
+
+      products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="image-container">
+            <img src="${product.img}" alt="${product.name}" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <p class="price">$${getRandomPrice()}</p>
+          </div>
+        `;
+        productsGrid.appendChild(card);
+      });
+
+      // Update category title
+      const titleMap = {
+        'ladies-dresses': "Ladies' Dresses",
+        'handbags': 'Handbags',
+        'beauty-products': 'Beauty Products',
+        'kids-toys': "Kids' Toys"
+      };
+      document.getElementById('categoryTitle').textContent = titleMap[category] || 'Category';
+    }
+
+    // Highlight active nav link
+    function highlightNavLink(category) {
+      document.querySelectorAll('.main-nav .nav-link').forEach(link => {
+        link.classList.remove('active');
+      });
+      const linkIdMap = {
+        'ladies-dresses': 'link-ladies',
+        'handbags': 'link-handbags',
+        'beauty-products': 'link-beauty',
+        'kids-toys': 'link-toys'
+      };
+      const activeLink = document.getElementById(linkIdMap[category]);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+
+    // Initialize page
+    const category = getCategoryFromUrl();
+    renderProducts(category);
+    highlightNavLink(category);
+  </script>
+</body>
+</html>

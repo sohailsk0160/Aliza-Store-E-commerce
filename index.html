@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aliza Store - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <div class="logo" aria-label="Aliza Store Logo">Aliza Store</div>
+      <form class="search-form" role="search" aria-label="Site search">
+        <input
+          type="search"
+          name="search"
+          aria-label="Search products"
+          placeholder="Search products..."
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <span class="material-icons">search</span>
+        </button>
+      </form>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#" class="nav-link active" aria-current="page" id="homeLink">Home</a>
+        <a href="#" class="nav-link" id="categoriesLink">Categories</a>
+        <a href="#" class="nav-link" id="aboutLink">About Us</a>
+        <a href="#" class="nav-link" id="contactLink">Contact Us</a>
+      </nav>
+      <a href="cart.html" class="cart-icon" aria-label="View Cart">
+        <span class="material-icons">shopping_cart</span>
+        <span class="cart-count" aria-hidden="true">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main style="padding-top: 68px;">
+    <section class="welcome-section" aria-label="Welcome to Aliza Store" id="welcomeSection">
+      <div class="container welcome-content">
+        <h1>Welcome to<br> Aliza Store</h1>
+        <p>
+          At Aliza Store, we bring you the finest collection of fashion and lifestyle products curated with love. Discover quality, style, and exceptional value all in one place.
+        </p>
+      </div>
+    </section>
+
+    <section class="categories-section container" aria-label="Product categories" id="categoriesSection">
+      <h2>Shop by Category</h2>
+      <div class="categories-grid">
+        <a href="category.html" class="category-card" role="link" aria-label="Ladies' Dresses category">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/daedcfde-74bb-481b-9fcb-df08938ef585.png"
+            alt="Display of various ladies' dresses with soft fabric and bright colors"
+            width="400"
+            height="260"
+            loading="lazy"
+          />
+          <div class="category-name">Ladies' Dresses</div>
+        </a>
+        <a href="category.html" class="category-card" role="link" aria-label="Handbags category">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/14599e15-82b4-4b4d-b4b1-8e7c325a8bc4.png"
+            alt="Collection of stylish handbags displayed on soft neutral background"
+            width="400"
+            height="260"
+            loading="lazy"
+          />
+          <div class="category-name">Handbags</div>
+        </a>
+        <a href="category.html" class="category-card" role="link" aria-label="Beauty Products category">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5cf03995-1db6-4400-9beb-ce76c3684b5e.png"
+            alt="High-quality beauty products such as skincare bottles and makeup tools"
+            width="400"
+            height="260"
+            loading="lazy"
+          />
+          <div class="category-name">Beauty Products</div>
+        </a>
+        <a href="category.html" class="category-card" role="link" aria-label="Kids' Toys category">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1803c010-5ce9-4c59-b6a2-f7933cc9b3ba.png"
+            alt="Colorful and fun kids' toys including stuffed animals and educational games"
+            width="400"
+            height="260"
+            loading="lazy"
+          />
+          <div class="category-name">Kids' Toys</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; 2024 Aliza Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal for About Us -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" id="closeAbout">&times;</span>
+        <h2>About Us</h2>
+      </div>
+      <div class="modal-body">
+        <p>Aliza Store is dedicated to providing the finest collection of fashion and lifestyle products. Our mission is to curate quality, style, and exceptional value for our customers.</p>
+        <p>Founded in 2020, we have grown to become a trusted name in the industry, offering a wide range of products that cater to diverse tastes and preferences.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Contact Us -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" id="closeContact">&times;</span>
+        <h2>Contact Us</h2>
+      </div>
+      <div class="modal-body">
+        <p>Connect with us on social media:</p>
+        <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Facebook">
+            <span class="material-icons">facebook</span>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+            <span class="material-icons">instagram</span>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Twitter">
+            <span class="material-icons">twitter</span>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <span class="material-icons">linkedin</span>
+          </a>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509198!2d144.9537353153164!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0f0f0f%3A0x0!2sAliza%20Store!5e0!3m2!1sen!2sus!4v1633031234567!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const categoriesLink = document.getElementById('categoriesLink');
+    const homeLink = document.getElementById('homeLink');
+    const aboutLink = document.getElementById('aboutLink');
+    const contactLink = document.getElementById('contactLink');
+    const categoriesSection = document.getElementById('categoriesSection');
+    const welcomeSection = document.getElementById('welcomeSection');
+    const siteHeader = document.getElementById('siteHeader');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Smooth scrolling handlers
+    categoriesLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      categoriesSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    homeLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      welcomeSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Modal handling
+    const aboutModal = document.getElementById('aboutModal');
+    const contactModal = document.getElementById('contactModal');
+    const closeAbout = document.getElementById('closeAbout');
+    const closeContact = document.getElementById('closeContact');
+
+    aboutLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      aboutModal.style.display = "block";
+    });
+
+    contactLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      contactModal.style.display = "block";
+    });
+
+    closeAbout.onclick = function() {
+      aboutModal.style.display = "none";
+    }
+
+    closeContact.onclick = function() {
+      contactModal.style.display = "none";
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target == aboutModal) {
+        aboutModal.style.display = "none";
+      }
+      if (event.target == contactModal) {
+        contactModal.style.display = "none";
+      }
+    }
+
+    // Intersection Observer to detect when categories is visible
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,  // Trigger when 30% visible
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if(entry.target.id === 'categoriesSection') {
+          if(entry.isIntersecting) {
+            // Hide header
+            siteHeader.style.transform = "translateY(-100%)"; // Hide header
+          }
+        } else if(entry.target.id === 'welcomeSection') {
+          if(entry.isIntersecting) {
+            // Show header
+            siteHeader.style.transform = "translateY(0)"; // Show header
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    observer.observe(categoriesSection);
+    observer.observe(welcomeSection);
+  </script>
+</body>
+</html>
